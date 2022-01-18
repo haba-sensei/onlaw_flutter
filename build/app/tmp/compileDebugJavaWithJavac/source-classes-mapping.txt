@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/haba/onlaw/onlaw/BuildConfig.java
+ com.haba.onlaw.onlaw.BuildConfig

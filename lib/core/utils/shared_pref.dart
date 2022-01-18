@@ -1,0 +1,46 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:onlaw/data/provider/users_provider.dart';
+import 'package:onlaw/routes/routes_names.dart';
+
+import 'package:shared_preferences/shared_preferences.dart';
+
+class SharedPref {
+  void save(String key, value) async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString(key, json.encode(value));
+  }
+
+  Future<dynamic> read(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+
+    if (prefs.getString(key) == null) return null;
+
+    var obj = prefs.getString(key);
+
+    return json.decode(obj!);
+  }
+
+  Future<bool> contains(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.containsKey(key);
+  }
+
+  Future<bool> remove(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.remove(key);
+  }
+
+  logout() async {
+    UsersProvider usersProvider = UsersProvider();
+    usersProvider.onInit();
+    Get.defaultDialog(
+      title: 'Cerrando session..',
+      content: const CircularProgressIndicator(),
+    );
+    await usersProvider.logout();
+    await remove('user');
+    Get.offAllNamed(Routes.login);
+  }
+}
