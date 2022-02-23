@@ -19,7 +19,7 @@ class DetContAreaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<DetContAreaController>(
         init: DetContAreaController(),
-        builder: (_) { 
+        builder: (_) {
           return Scaffold(
             extendBody: true,
             backgroundColor: MyColors.blackBasico,
@@ -30,12 +30,13 @@ class DetContAreaPage extends StatelessWidget {
             drawer: const DrawerLayout(
               page: 'DETALLE \nCONTENIDO',
             ),
-            bottomNavigationBar: const CustomBottonNavBar(), 
+            bottomNavigationBar: const CustomBottonNavBar(),
             body: SafeArea(
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               BreadcrumbCustom(
+                ruta: 'back',
                 text: Get.arguments.nombre.toString(),
-              ), 
+              ),
               const SizedBox(height: 15),
               MainContenido(ruta: Routes.mapa, lista: _.areaCont)
             ])),

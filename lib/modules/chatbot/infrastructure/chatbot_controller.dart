@@ -11,7 +11,7 @@ class ChatbotController extends GetxController {
   ChatbotProvider chatbotProvider = ChatbotProvider();
   UserModel? user = UserModel();
   List<MenuContentModel> contentChat = [];
-
+ 
   @override
   void onInit() async {
     user = UserModel.fromJson(await _sharedPref.read('user'));

@@ -5291,7 +5291,6 @@ kotlin.text.MatchGroup
 android.support.v4.media.MediaBrowserCompat$MediaBrowserImplApi21$6
 com.google.common.util.concurrent.AbstractService$StateSnapshot
 kotlin.text.Regex$Serialized
-com.haba.onlaw.onlaw.R$dimen
 org.threeten.bp.zone.StandardZoneRules:
     void <init>(org.threeten.bp.ZoneOffset,org.threeten.bp.ZoneOffset,java.util.List,java.util.List,java.util.List)
     public org.threeten.bp.ZoneOffset getOffset(org.threeten.bp.LocalDateTime)
@@ -5304,6 +5303,7 @@ org.threeten.bp.zone.StandardZoneRules:
     public java.util.List getTransitionRules()
     private static final long serialVersionUID
     private static final int LAST_CACHED_YEAR
+com.haba.onlaw.onlaw.R$dimen
 androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$3
 org.threeten.bp.temporal.WeekFields
 com.google.common.cache.LocalCache$LoadingSerializationProxy
@@ -7448,8 +7448,8 @@ kotlin.coroutines.Continuation
 androidx.activity.R$string
 kotlin.system.TimingKt
 com.google.common.graph.AbstractNetwork$2
-com.google.common.graph.Traverser$GraphTraverser$2
 com.google.common.util.concurrent.ServiceManager$ServiceManagerState$1
+com.google.common.graph.Traverser$GraphTraverser$2
 com.google.common.collect.ForwardingImmutableList
 com.google.common.collect.Synchronized$SynchronizedAsMapEntries
 com.google.common.collect.Synchronized$SynchronizedAsMap
@@ -8187,5 +8187,5 @@ org.threeten.bp.MonthDay$1
 android.support.v4.media.session.MediaControllerCompat$Callback:
     final android.media.session.MediaController$Callback mCallbackFwk
 org.threeten.bp.chrono.ChronoLocalDate$1
-androidx.lifecycle.DefaultLifecycleObserver$-CC
 io.flutter.plugin.platform.PlatformView$-CC
+androidx.lifecycle.DefaultLifecycleObserver$-CC

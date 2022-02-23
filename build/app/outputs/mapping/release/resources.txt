@@ -1721,4 +1721,4 @@ attr:keylines:2130771980,
    attr:android_endY:-1,
    attr:android_tileMode:-1,
    attr:android_offset:-1
-Resource shrinking did not work (grew from 638454 to 638862); using original instead
+Resource shrinking did not work (grew from 653844 to 654237); using original instead

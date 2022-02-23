@@ -5,6 +5,7 @@ import 'package:onlaw/modules/areas/application/detalle_area_page.dart';
 import 'package:onlaw/modules/areas/application/mapa_page.dart';
 import 'package:onlaw/modules/areas/application/mapa_sub_page.dart';
 import 'package:onlaw/modules/asesor/application/asesor_page.dart';
+import 'package:onlaw/modules/asesor/application/chat_page.dart';
 import 'package:onlaw/modules/chatbot/application/chatbot_page.dart';
 import 'package:onlaw/modules/home/application/home_page.dart';
 import 'package:onlaw/modules/notification/application/notification_page.dart';
@@ -55,6 +56,11 @@ class AppPages {
     GetPage<AsesorPage>(
       name: '/asesor',
       page: () => const AsesorPage(),
+      transition: Transition.zoom,
+    ),
+    GetPage<ChatPage>(
+      name: '/chat',
+      page: () => const ChatPage(),
       transition: Transition.zoom,
     ),
     GetPage<ContenidoAreaPage>(

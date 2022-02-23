@@ -32,6 +32,7 @@ class ContenidoAreaPage extends StatelessWidget {
             body: SafeArea(
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               BreadcrumbCustom(
+                ruta: 'back',
                 text: Get.arguments.nombre.toString(),
               ),
               const SizedBox(height: 15),

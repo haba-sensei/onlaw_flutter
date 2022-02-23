@@ -6,10 +6,10 @@ import 'package:onlaw/routes/routes_names.dart';
 class CardAttach extends StatelessWidget {
   const CardAttach({Key? key, required this.text, required this.url}) : super(key: key);
 
-  final String text, url; 
+  final String text, url;
   @override
   Widget build(BuildContext context) {
-    final String _baseUrl = Environment.remoteConexion + 'files/';
+    const String _baseUrl = Environment.remoteConexion + 'files/';
     return Padding(
       padding: const EdgeInsets.only(top: 10.0),
       child: Container(
@@ -37,7 +37,7 @@ class CardAttach extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    Get.toNamed(Routes.preview, arguments: _baseUrl+url);
+                    Get.toNamed(Routes.preview, arguments: _baseUrl + url);
                   },
                   child: const Icon(
                     Icons.remove_red_eye,

@@ -4,8 +4,9 @@ import 'package:get/get.dart';
 import 'package:onlaw/core/utils/colors.dart';
 
 class BreadcrumbCustom extends StatelessWidget {
-  const BreadcrumbCustom({Key? key, required this.text}) : super(key: key);
+  const BreadcrumbCustom({Key? key, required this.ruta, required this.text}) : super(key: key);
   final String text;
+  final String ruta;
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +15,12 @@ class BreadcrumbCustom extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20, right: 25),
       height: 60,
       width: double.infinity,
-      decoration: BoxDecoration(
-          color: MyColors.grisMain,
-          borderRadius: const BorderRadius.all(Radius.circular(20))),
+      decoration: BoxDecoration(color: MyColors.grisMain, borderRadius: const BorderRadius.all(Radius.circular(20))),
       child: BreadCrumb(
         items: <BreadCrumbItem>[
           BreadCrumbItem(
               onTap: () {
-                Get.back();
+                ruta == 'back' ? Get.back() : Get.offAllNamed(ruta);
               },
               content: Row(
                 children: const [
@@ -46,11 +45,7 @@ class BreadcrumbCustom extends StatelessWidget {
             size: 30,
           ),
         ),
-        overflow: ScrollableOverflow(
-            physics: const BouncingScrollPhysics(),
-            keepLastDivider: false,
-            reverse: false,
-            direction: Axis.horizontal),
+        overflow: ScrollableOverflow(physics: const BouncingScrollPhysics(), keepLastDivider: false, reverse: false, direction: Axis.horizontal),
       ),
     );
   }

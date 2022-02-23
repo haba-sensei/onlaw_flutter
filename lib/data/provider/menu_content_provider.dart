@@ -39,11 +39,11 @@ class MenuContentProvider extends GetxController {
       if (res.statusCode == 401) {
         SharedPref().logout();
       }
-      print(token);
+
       final data = json.decode(res.body);
 
       MenuContentModel area = MenuContentModel.fromJsonList(data);
-
+      // print(area.toList);
       return area.toList;
     } catch (e) {
       // print('Errors $e');

@@ -14,6 +14,7 @@ abstract class Routes {
   static const mapaSub = '/mapaSub';
   static const chatbot = '/chatbot';
   static const asesor = '/asesor';
+  static const chat = '/chat';
   static const subscription = '/subscription';
   static const payment = '/payment';
   static const search = '/search';
